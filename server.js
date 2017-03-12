@@ -5,6 +5,7 @@
 
 var express = require("express");
 var mongojs = require("mongojs");
+var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 // Requiring our Note and Article models
@@ -14,7 +15,6 @@ var Article = require("./models/Article.js");
 // Require request and cheerio. This makes the scraping possible
 var request = require("request");
 var cheerio = require("cheerio");
-var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
@@ -39,7 +39,7 @@ app.use(express.static("public"));
 // --------- DATABASE CONFIG - CONNECT TO MONGOOSE -----
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/week18day3mongoose");
+mongoose.connect("mongodb://localhost/homework18mongoose");
 var db = mongoose.connection;
 
 // Show any mongoose errors

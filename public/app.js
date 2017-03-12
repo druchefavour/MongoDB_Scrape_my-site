@@ -14,8 +14,6 @@ $(document).on("click", "p", function() {
   // Save the id from the p tag
   var thisId = $(this).attr("data-id");
 
-alert('Good Job');
-
   // Now make an ajax call for the Article
   $.ajax({
     method: "GET",
@@ -71,3 +69,6 @@ $(document).on("click", "#savenote", function() {
   $("#titleinput").val("");
   $("#bodyinput").val("");
 });
+
+alert('Good Job');
+
